@@ -3,6 +3,7 @@ package com.example.jetpackcomposeinstagram
 import android.app.Activity
 import android.widget.Space
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.MutatePriority
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -177,6 +178,7 @@ fun Password(password: String, onTextChanged: (String) -> Unit) {
             val imagen = if(passwordVisibility){
                 Icons.Filled.VisibilityOff
             }else {
+                Icons.Filled.Visibility
             }
             IconButton(onClick = { passwordVisibility = !passwordVisibility }) {
                 Icon(imageVector = imagen, contentDescription = "Show password" )
